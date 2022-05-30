@@ -35,7 +35,7 @@ def get_bookinfo():
         # 가격
         info['price'] = tr.select_one('.price .org_price del').string
         # 이미지 --- (4b)
-        save_file = './output/{}.jpg'.format(title.replace("/", "_"))
+        save_file = './output/{}.jpg'.format(title.replace("/", "_").replace("?", "_"))
         info['img']= os.path.abspath(save_file)
         # 이미지 파일로 저장 --- (4c)
         src = tr.img['src']
